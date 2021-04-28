@@ -1,6 +1,9 @@
-syntax on
-filetype plugin on
+call plug#begin("~/.vim/plugged")
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'airblade/vim-gitgutter'
+call plug#end()
 
-set relativenumber
-set signcolumn=yes
-set number
+colorscheme gruvbox
+let mapleader = " "
