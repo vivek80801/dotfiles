@@ -8,6 +8,9 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 noremap <silent> K :call <SID>show_documentation()<CR>
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f :Prettier<CR>
 
 if has('nvim-0.4.0') || has('patch-8.2.0750')
   nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -33,3 +36,6 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
