@@ -10,6 +10,7 @@ set signcolumn=yes
 set number
 set hidden
 set updatetime=50
+set wildignore+=**/node_modules/*
 
 if has("patch-8.1.1564")
   set signcolumn=number
