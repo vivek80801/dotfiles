@@ -14,4 +14,4 @@ nnoremap <leader>wq :wq<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>re :so<Space>%<CR>
-nnoremap <leader>s :e<Space>
+nnoremap <leader>s :e<Space>**/
