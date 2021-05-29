@@ -13,6 +13,7 @@ set hidden
 set updatetime=50
 set scrolloff=8
 set wildignore+=**/node_modules/*
+set background=dark
 
 if has("patch-8.1.1564")
   set signcolumn=number

@@ -7,6 +7,8 @@ inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
 inoremap < <><Esc>i
 nnoremap ew <C-w><C-w>
+nnoremap eh <C-w>h
+nnoremap el <C-w>l
 nnoremap <leader>; A;<Esc>
 nnoremap <leader>e :Lexplore<CR>
 nnoremap <leader>w :w<CR>
