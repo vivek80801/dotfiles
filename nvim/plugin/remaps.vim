@@ -19,3 +19,4 @@ nnoremap <leader>re :so<Space>%<CR>
 nnoremap <leader>s :e<Space>**/
 nnoremap <leader>t :terminal<CR>
 tnoremap jj <C-\><C-n>
+tnoremap <leader>gf <C-w>F
