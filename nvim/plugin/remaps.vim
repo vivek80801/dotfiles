@@ -17,3 +17,5 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>re :so<Space>%<CR>
 nnoremap <leader>s :e<Space>**/
+nnoremap <leader>t :terminal<CR>
+tnoremap jj <C-\><C-n>
