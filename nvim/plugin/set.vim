@@ -1,7 +1,6 @@
 syntax on
 filetype plugin on
 
-highlight Normal ctermbg=none
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -10,6 +9,7 @@ set relativenumber
 set signcolumn=yes
 set number
 set hidden
+set nobackup
 set updatetime=50
 set scrolloff=8
 set wildignore+=**/node_modules/*
