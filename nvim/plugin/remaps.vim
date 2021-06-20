@@ -18,10 +18,10 @@ nnoremap <leader>qq :q!<CR>
 nnoremap <leader>re :so<Space>%<CR>
 nnoremap <leader>s :e<Space>**/
 nnoremap <leader>t :terminal<CR>
-nnoremap <leader>y "+yy
-nnoremap <leader>p "+p
-vnoremap <leader>y "+y
-vnoremap <leader>p "+p
+nnoremap <leader>y "+yy:echo "copied to calipboard"<CR>
+nnoremap <leader>p "+p:echo "pasted from calipboard"<CR>
+vnoremap <leader>y "+yy:echo "copied to calipboard"<CR>
+vnoremap <leader>p "+p:echo "pasted from calipboard"<CR>
 tnoremap jj <C-\><C-n>
 " go to the file from where error is coming and press CTRL+u to come back to
 " terminal
