@@ -1,4 +1,3 @@
-
 let g:firenvim_config = { 
     \ 'globalSettings': {
         \ 'alt': 'all',
@@ -25,4 +24,3 @@ if exists('g:started_by_firenvim')
 else
   set laststatus=2
 endif
-
