@@ -82,6 +82,7 @@ plugins=(
     git zsh-autosuggestions zsh-syntax-highlighting
     aliases
     alias-finder
+    emoji
     )
 
 source $ZSH/oh-my-zsh.sh
