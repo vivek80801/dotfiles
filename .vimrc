@@ -32,6 +32,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'szw/vim-maximizer'
 "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(8) } }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 colorscheme gruvbox

@@ -118,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
 
 # vi mode
 bindkey -v
-export KEYTIMEOUT=1
+export KEYTIMEOUT=25
 
 # Edit line in vim buffer ctrl+v
 autoload edit-command-line; zle -N edit-command-line
@@ -130,7 +130,20 @@ bindkey -M menuselect "j" vi-down-line-or-history
 bindkey -M menuselect "k" vi-up-line-or-history
 bindkey -M menuselect "l" vi-forward-char
 
+# binding key "jj" to normal mode
+# it is equal to `inoremap jj <Esc>` in vim or neovim
+bindkey -M viins "jj" vi-cmd-mode
+
 # source alias
 source ~/.oh-my-zsh/custom/my-alias/file-alias.zsh
 source ~/.oh-my-zsh/custom/my-alias/editor-alias.zsh
 source ~/.oh-my-zsh/custom/my-alias/open-editor-alias.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#bindkey -M viins '^R' history-incremental-search-backward
+#bindkey -M vicmd '^R' history-incremental-search-backwar
+
+# ignore files in fzf
+export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp,dist} --type f"
+
