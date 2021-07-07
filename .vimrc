@@ -18,6 +18,7 @@ set wildignore+=**/.build/*
 set wildignore+=**/.dist/*
 set background=dark
 set noerrorbells visualbell t_vb=
+set showmatch
 
 "netrw the file explorer or file tree
 let g:netrw_banner = 0
@@ -31,7 +32,6 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'szw/vim-maximizer'
-"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(8) } }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
