@@ -22,6 +22,10 @@ require("awful.hotkeys_popup.keys")
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
+-- My Wallpapers
+local myWallpapers = {"Spices_in_Athens_by_Makis_Chourdakis.jpg", "Raindrops_On_The_Table_by_Alex_Fazit.jpg", "Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg", "brad-huchteman-stone-mountain.jpg", "Focal-Fossa_WP_4096x2304_GREY.png", "warty-final-ubuntu.png"}
+local myRandom = math.floor(math.random() * 2)
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
