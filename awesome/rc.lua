@@ -54,7 +54,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 browser = "brave-browser"
 terminal = "x-terminal-emulator"
-editor = os.getenv("EDITOR") or "editor"
+editor = os.getenv("vim") or "gedit"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -122,51 +122,51 @@ awful.layout.layouts = {
 -- }}}
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
+--mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+--mytextclock = wibox.widget.textclock()
 
 -- Create a wibox for each screen and add it
-local taglist_buttons = gears.table.join(
-                    awful.button({ }, 1, function(t) t:view_only() end),
-                    awful.button({ modkey }, 1, function(t)
-                                              if client.focus then
-                                                  client.focus:move_to_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 3, awful.tag.viewtoggle),
-                    awful.button({ modkey }, 3, function(t)
-                                              if client.focus then
-                                                  client.focus:toggle_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
-                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
-                )
-
-local tasklist_buttons = gears.table.join(
-                     awful.button({ }, 1, function (c)
-                                              if c == client.focus then
-                                                  c.minimized = true
-                                              else
-                                                  c:emit_signal(
-                                                      "request::activate",
-                                                      "tasklist",
-                                                      {raise = true}
-                                                  )
-                                              end
-                                          end),
-                     awful.button({ }, 3, function()
-                                              awful.menu.client_list({ theme = { width = 250 } })
-                                          end),
-                     awful.button({ }, 4, function ()
-                                              awful.client.focus.byidx(1)
-                                          end),
-                     awful.button({ }, 5, function ()
-                                              awful.client.focus.byidx(-1)
-                                          end))
+--local taglist_buttons = gears.table.join(
+--                    awful.button({ }, 1, function(t) t:view_only() end),
+--                    awful.button({ modkey }, 1, function(t)
+--                                              if client.focus then
+--                                                  client.focus:move_to_tag(t)
+--                                              end
+--                                          end),
+--                    awful.button({ }, 3, awful.tag.viewtoggle),
+--                    awful.button({ modkey }, 3, function(t)
+--                                              if client.focus then
+--                                                  client.focus:toggle_tag(t)
+--                                              end
+--                                          end),
+--                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
+--                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
+--                )
+--
+--local tasklist_buttons = gears.table.join(
+--                     awful.button({ }, 1, function (c)
+--                                              if c == client.focus then
+--                                                  c.minimized = true
+--                                              else
+--                                                  c:emit_signal(
+--                                                      "request::activate",
+--                                                      "tasklist",
+--                                                      {raise = true}
+--                                                  )
+--                                              end
+--                                          end),
+--                     awful.button({ }, 3, function()
+--                                              awful.menu.client_list({ theme = { width = 250 } })
+--                                          end),
+--                     awful.button({ }, 4, function ()
+--                                              awful.client.focus.byidx(1)
+--                                          end),
+--                     awful.button({ }, 5, function ()
+--                                              awful.client.focus.byidx(-1)
+--                                          end))
 
 local function set_wallpaper(s)
     -- Wallpaper
