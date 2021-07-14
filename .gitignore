@@ -1,1 +1,8 @@
+*.txt
+*.pem
+*.pub
+*rsa
+*.zcompdump
+*history
+*errors*
 .netrwhist
