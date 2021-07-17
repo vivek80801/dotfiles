@@ -8,7 +8,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(8) } }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'vivek80801/complete-brackets'
+Plug 'vivek80801/Brackets'
 call plug#end()
 
 colorscheme gruvbox

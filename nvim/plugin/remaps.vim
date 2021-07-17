@@ -1,11 +1,4 @@
 inoremap jj <Esc>
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
-inoremap ` ``<Esc>i
-inoremap < <><Esc>i
 nnoremap ew <C-w><C-w>
 nnoremap eh <C-w>h
 nnoremap el <C-w>l
