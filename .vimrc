@@ -26,14 +26,18 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
 
 "plugins
-call plug#begin("~/.vim/plugged")
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'airblade/vim-gitgutter'
-Plug 'szw/vim-maximizer'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-call plug#end()
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+    call plug#begin("~/.vim/plugged")
+    Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'gruvbox-community/gruvbox'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'airblade/vim-gitgutter'
+    Plug 'szw/vim-maximizer'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    call plug#end()
+else
+    echo "plug is not installed"
+endif
 
 colorscheme gruvbox
 
