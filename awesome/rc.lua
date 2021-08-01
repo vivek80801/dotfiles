@@ -87,86 +87,85 @@ awful.layout.layouts = {
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
--- myawesomemenu = {
---   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
---   { "manual", terminal .. " -e man awesome" },
---   { "edit config", editor_cmd .. " " .. awesome.conffile },
---   { "restart", awesome.restart },
---   { "quit", function() awesome.quit() end },
--- }
+ myawesomemenu = {
+   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+   { "manual", terminal .. " -e man awesome" },
+   { "edit config", editor_cmd .. " " .. awesome.conffile },
+   { "restart", awesome.restart },
+   { "quit", function() awesome.quit() end },
+ }
 
---local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
---local menu_terminal = { "open terminal", terminal }
+local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
+local menu_terminal = { "open terminal", terminal }
 
---if has_fdo then
---    mymainmenu = freedesktop.menu.build({
---        before = { menu_awesome },
---        after =  { menu_terminal }
---    })
---else
---    mymainmenu = awful.menu({
---        items = {
---                  menu_awesome,
---                  { "Debian", debian.menu.Debian_menu.Debian },
---                  menu_terminal,
---                }
---    })
---end
+if has_fdo then
+    mymainmenu = freedesktop.menu.build({
+        before = { menu_awesome },
+        after =  { menu_terminal }
+    })
+else
+    mymainmenu = awful.menu({
+        items = {
+                  menu_awesome,
+                  { "Debian", debian.menu.Debian_menu.Debian },
+                  menu_terminal,
+                }
+    })
+end
 
-
---mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
- --                                    menu = mymainmenu })
+mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+                                    menu = mymainmenu })
 
 -- Menubar configuration
---menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
+menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+ --}}}
 
 -- Keyboard map indicator and switcher
---mykeyboardlayout = awful.widget.keyboardlayout()
+mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
--- Create a textclock widget
---mytextclock = wibox.widget.textclock()
+ --Create a textclock widget
+mytextclock = wibox.widget.textclock()
 
--- Create a wibox for each screen and add it
---local taglist_buttons = gears.table.join(
---                    awful.button({ }, 1, function(t) t:view_only() end),
---                    awful.button({ modkey }, 1, function(t)
---                                              if client.focus then
---                                                  client.focus:move_to_tag(t)
---                                              end
---                                          end),
---                    awful.button({ }, 3, awful.tag.viewtoggle),
---                    awful.button({ modkey }, 3, function(t)
---                                              if client.focus then
---                                                  client.focus:toggle_tag(t)
---                                              end
---                                          end),
---                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
---                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
---                )
---
---local tasklist_buttons = gears.table.join(
---                     awful.button({ }, 1, function (c)
---                                              if c == client.focus then
---                                                  c.minimized = true
---                                              else
---                                                  c:emit_signal(
---                                                      "request::activate",
---                                                      "tasklist",
---                                                      {raise = true}
---                                                  )
---                                              end
---                                          end),
---                     awful.button({ }, 3, function()
---                                              awful.menu.client_list({ theme = { width = 250 } })
---                                          end),
---                     awful.button({ }, 4, function ()
---                                              awful.client.focus.byidx(1)
---                                          end),
---                     awful.button({ }, 5, function ()
---                                              awful.client.focus.byidx(-1)
---                                          end))
+ --Create a wibox for each screen and add it
+local taglist_buttons = gears.table.join(
+                    awful.button({ }, 1, function(t) t:view_only() end),
+                    awful.button({ modkey }, 1, function(t)
+                                              if client.focus then
+                                                  client.focus:move_to_tag(t)
+                                              end
+                                          end),
+                    awful.button({ }, 3, awful.tag.viewtoggle),
+                    awful.button({ modkey }, 3, function(t)
+                                              if client.focus then
+                                                  client.focus:toggle_tag(t)
+                                              end
+                                          end),
+                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
+                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
+                )
+
+local tasklist_buttons = gears.table.join(
+                     awful.button({ }, 1, function (c)
+                                              if c == client.focus then
+                                                  c.minimized = true
+                                              else
+                                                  c:emit_signal(
+                                                      "request::activate",
+                                                      "tasklist",
+                                                      {raise = true}
+                                                  )
+                                              end
+                                          end),
+                     awful.button({ }, 3, function()
+                                              awful.menu.client_list({ theme = { width = 250 } })
+                                          end),
+                     awful.button({ }, 4, function ()
+                                              awful.client.focus.byidx(1)
+                                          end),
+                     awful.button({ }, 5, function ()
+                                              awful.client.focus.byidx(-1)
+                                          end))
 
 local function set_wallpaper(s)
     -- Wallpaper
@@ -179,7 +178,7 @@ local function set_wallpaper(s)
         -- default wallpaper
         -- gears.wallpaper.maximized(wallpaper, s, true)
         -- my wallpaper
-        gears.wallpaper.maximized("/usr/share/backgrounds/TCP118v1_by_Tiziano_Consonni.jpg", s, true)
+        gears.wallpaper.maximized("/usr/share/backgrounds/passion_flower_by_Irene_Gr.jpg", s, true)
     end
 end
 
@@ -218,26 +217,26 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-   -- s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s })
 
    -- -- Add widgets to the wibox
-   -- s.mywibox:setup {
-   --     layout = wibox.layout.align.horizontal,
-   --     { -- Left widgets
-   --         layout = wibox.layout.fixed.horizontal,
-   --         mylauncher,
-   --         s.mytaglist,
-   --         s.mypromptbox,
-   --     },
-   --     s.mytasklist, -- Middle widget
-   --     { -- Right widgets
-   --         layout = wibox.layout.fixed.horizontal,
-   --         -- mykeyboardlayout,
-   --         -- wibox.widget.systray(),
-   --        -- mytextclock,
-   --        -- s.mylayoutbox,
-   --     },
-   -- }
+    s.mywibox:setup {
+        layout = wibox.layout.align.horizontal,
+        { -- Left widgets
+            layout = wibox.layout.fixed.horizontal,
+         --   mylauncher,
+            s.mytaglist,
+            s.mypromptbox,
+        },
+        s.mytasklist, -- Middle widget
+        { -- Right widgets
+            layout = wibox.layout.fixed.horizontal,
+             mykeyboardlayout,
+             wibox.widget.systray(),
+            mytextclock,
+            s.mylayoutbox,
+        },
+    }
 end)
 -- }}}
 
