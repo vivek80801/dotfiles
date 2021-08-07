@@ -15,6 +15,7 @@ if filereadable(expand("~/.local/share/nvim/site/autoload/plug.vim"))
     colorscheme gruvbox
 else
     echo "plug is not installed"
+    colorscheme pablo
 endif
 
 let mapleader = " "

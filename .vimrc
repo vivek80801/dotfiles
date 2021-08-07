@@ -38,9 +38,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     colorscheme gruvbox
 else
     echo "plug is not installed"
+    colorscheme pablo
 endif
-
-colorscheme pabla
 
 let mapleader = " "
 
