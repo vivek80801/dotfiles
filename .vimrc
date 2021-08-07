@@ -35,11 +35,12 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'szw/vim-maximizer'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     call plug#end()
+    colorscheme gruvbox
 else
     echo "plug is not installed"
 endif
 
-colorscheme gruvbox
+colorscheme pabla
 
 let mapleader = " "
 

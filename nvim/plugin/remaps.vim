@@ -9,7 +9,9 @@ nnoremap <leader>wq :wq<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>re :so<Space>%<CR>
-nnoremap <leader>s :e<Space>**/
+nnoremap <leader>st :e<Space>**/*.ts
+nnoremap <leader>sj :e<Space>**/*.js
+nnoremap <leader>sx :e<Space>**/*.tsx
 nnoremap <leader>t :terminal<CR>
 nnoremap <leader>y "+yy:echo "copied to calipboard"<CR>
 nnoremap <leader>p "+p:echo "pasted from calipboard"<CR>
