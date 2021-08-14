@@ -12,7 +12,7 @@ set hidden
 set nobackup
 set updatetime=50
 set scrolloff=8
-set wildignore+=**/node_modules/*
+set wildignore+=**/*/node_modules
 set wildignore+=**/.git
 set wildignore+=**/build
 set wildignore+=**/dist
