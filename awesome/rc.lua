@@ -51,10 +51,7 @@ end
 -- Themes define colours, icons, font and wallpapers.
 --
 -- default theme
---beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
---
--- My theme
-beautiful.init(gears.filesystem.get_configuration_dir() .. "theme/myTheme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 browser = "brave-browser"
