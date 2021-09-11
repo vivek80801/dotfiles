@@ -56,7 +56,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 browser = "brave-browser"
 terminal = "x-terminal-emulator"
-editor = os.getenv("vim") or "gedit"
+editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
