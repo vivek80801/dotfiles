@@ -5,9 +5,6 @@ if filereadable(expand("~/.local/share/nvim/site/autoload/plug.vim"))
     Plug 'airblade/vim-gitgutter'
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
-    "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(8) } }
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'vivek80801/Brackets'
     call plug#end()

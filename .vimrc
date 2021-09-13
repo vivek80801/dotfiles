@@ -34,7 +34,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'airblade/vim-gitgutter'
     Plug 'szw/vim-maximizer'
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     call plug#end()
     colorscheme gruvbox
 else
@@ -64,18 +63,6 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>re :so<Space>%<CR>
 nnoremap <leader>s :e<Space>**/
-
-"javascript remaps
-nnoremap Cl iconsole.log()<Esc>i
-nnoremap Marr i()<Space>=><Space>{<CR><CR>}<Esc>ki<Tab>
-nnoremap Narr iconst<Space>name<Space>=<Space>()<Space>=><Space>{<CR><CR>}<Esc>ki<Tab>
-nnoremap Co iconst<Space>name<Space>=<Space>
-nnoremap Nm <Esc>Iimport<Space>name<Space>from<Space>""<Esc>i
-nnoremap {j i<Esc>Iimport<Space>{}<Space>from<Space>""<Esc>i
-nnoremap Re iconst<Space>name<Space>=<Space>require("")<Esc>hi
-nnoremap Di idocument.getelementById("")<Esc>i
-nnoremap Dq idocument.querySelector("")<Esc>i
-nnoremap Ta i<Tab>
 
 "coc
 nmap <silent> gd <Plug>(coc-definition)
