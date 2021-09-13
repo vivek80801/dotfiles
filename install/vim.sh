@@ -8,6 +8,8 @@ then
 
     echo "Installing all vim plugins"
     vim -es -u ../.vimrc -i NONE -c "PlugInstall" -c "qa"
+elif [ "${DISTRO}"="Debian" ]
+    sudo apt install vim -y
 else
     echo "try installing yourself"
 fi
