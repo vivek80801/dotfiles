@@ -51,7 +51,9 @@ end
 -- Themes define colours, icons, font and wallpapers.
 --
 -- default theme
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+--beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- My theme
+beautiful.init("~/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 browser = "brave-browser"
@@ -525,6 +527,7 @@ awful.rules.rules = {
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
+    --   my keybinding
     --  always open gnome-terminal in fullscreen and in tag 1. always open brave in fullscreen
     {rule =  {class = "Gnome-terminal"}, properties = {fullscreen = true, tag= "1"}} ,
     {rule =  {class = "Brave-browser"}, properties = {fullscreen = true}} 
