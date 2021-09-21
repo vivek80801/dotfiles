@@ -50,4 +50,5 @@ ln -s ${HOME}/dotfiles/.zshrc ${HOME}/.zshrc
 ln -s ${HOME}/dotfiles/.Xresources ${HOME}/.Xresources
 ln -s ${HOME}/dotfiles/nvim ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/awesome ${HOME}/.config/awesome
+ln -s ${HOME}/dotfiles/.screenrc ${HOME}/.screenrc
 echo "all files are linked"
