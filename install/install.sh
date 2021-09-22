@@ -51,4 +51,6 @@ ln -s ${HOME}/dotfiles/.Xresources ${HOME}/.Xresources
 ln -s ${HOME}/dotfiles/nvim ${HOME}/.config/nvim
 ln -s ${HOME}/dotfiles/awesome ${HOME}/.config/awesome
 ln -s ${HOME}/dotfiles/.screenrc ${HOME}/.screenrc
+ln -s ${HOME}/dotfiles/.nanorc ${HOME}/.nanorc
+ln -s ${HOME}/dotfiles/.nano ${HOME}/.nano
 echo "all files are linked"
