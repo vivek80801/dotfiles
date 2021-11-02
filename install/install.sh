@@ -53,4 +53,5 @@ ln -s ${HOME}/dotfiles/awesome ${HOME}/.config/awesome
 ln -s ${HOME}/dotfiles/.screenrc ${HOME}/.screenrc
 ln -s ${HOME}/dotfiles/.nanorc ${HOME}/.nanorc
 ln -s ${HOME}/dotfiles/.nano ${HOME}/.nano
+ln -s ${HOME}/dotfiles/.inputrc ${HOME}/.inputrc
 echo "all files are linked"
