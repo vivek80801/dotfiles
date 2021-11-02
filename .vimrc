@@ -114,7 +114,12 @@ augroup remember_folds
 augroup END
 
 augroup change_cursor_when_changing_modes
-    au!
-    au InsertEnter * silent execute "!echo -en \<esc>[5 q"
-    au InsertLeave * silent execute "!echo -en \<esc>[2 q"
+    autocmd!
+    autocmd InsertEnter * silent execute "!echo -en \<esc>[5 q"
+    autocmd InsertLeave * silent execute "!echo -en \<esc>[2 q"
+augroup END
+
+augroup block_cursor_when_vim_starts
+    autocmd!
+    autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
