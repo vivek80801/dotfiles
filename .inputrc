@@ -4,11 +4,11 @@ set editing-mode vi
 set show-mode-in-prompt on
 
 $if term=linux
-	set vi-ins-mode-string "\1\e[?0c\2 \e[1;44;37m Insert \e[0m "
-	set vi-cmd-mode-string "\1\e[?8c\2 \e[1;44;37m Normal \e[0m "
+	set vi-ins-mode-string "\1\e[?0c\2 \1\e[1;44;37m\2 Insert \1\e[0m\2 "
+	set vi-cmd-mode-string "\1\e[?8c\2 \1\e[1;44;37m\2 Normal \1\e[0m\2 "
 $else
-	set vi-ins-mode-string "\1\e[6 q\2 \e[1;44;37m Insert \e[0m "
-	set vi-cmd-mode-string "\1\e[2 q\2 \e[1;44;37m Normal \e[0m "
+	set vi-ins-mode-string "\1\e[6 q\2 \1\e[1;44;37m\2 Insert \1\e[0m\2 "
+	set vi-cmd-mode-string "\1\e[2 q\2 \1\e[1;44;37m\2 Normal \1\e[0m\2 "
 $endif
 
 $if mode=vi
