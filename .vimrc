@@ -106,8 +106,8 @@ endfunction
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+"auto command
 if has("autocmd")
-    "auto command
     augroup remember_folds
         autocmd!
         autocmd BufWinLeave * mkview
@@ -122,6 +122,6 @@ if has("autocmd")
 
     augroup block_cursor_when_vim_starts
         autocmd!
-        autocmd VimEnter * silent !echo -ne "\e[2 q"
+        autocmd VimEnter * silent !echo -ne "\e[2 q \e]12;white\a"
     augroup END
 endif
