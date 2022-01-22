@@ -64,6 +64,11 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>re :so<Space>%<CR>
 nnoremap <leader>s :e<Space>**/
+nnoremap <c-j> :cnext<CR>
+nnoremap <c-k> :cprev<CR>
+nnoremap <leader>o :lopen<CR>
+nnoremap <leader>j :lnext<CR>
+nnoremap <leader>k :lprev<CR>
 
 "coc
 nmap <silent> gd <Plug>(coc-definition)
@@ -126,3 +131,8 @@ if has("autocmd")
         autocmd VimEnter * silent !echo -ne "\e[2 q \e]12;white\a"
     augroup END
 endif
+
+" React specific
+au fileType typescriptreact iab rfce import<Space>React<Space>from<Space>"<Esc>A<bs>react"<Esc>A<bs>;<Enter><Enter>const<Space><Esc>:put =expand('%:t')<CR><Esc>kJA<bs><bs><bs><bs> :React.FC = ():JSX.Element => {<Enter>return(<Enter><<Esc>la<Enter><<Esc>a/<Esc>A<bs><Enter><Enter>export default<Esc>:put =expand('%:t')<CR>kJA<bs><bs><bs><bs>;<Esc>3ko
+au fileType typescriptreact iab st const<Space>[state,<Space>setState<Esc>A<Space>=<Space>React.useState(<Esc>A;<Esc>F(a
+au fileType typescriptreact iab ef const<Space>[state,<Space>setState<Esc>A<Space>=<Space>React.useState(<Esc>A;<Esc>F(a
